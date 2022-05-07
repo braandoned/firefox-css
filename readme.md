@@ -19,6 +19,8 @@ the jellybeans.vim theme
 - `tokyo-night-fox/`
     - `chrome/` : contains the firefox css based on 
 the tokyo-night theme
+-  `fonts/` : 
+    - `CartographCF` : Required font. Put this folder in your `.local/share/fonts` directory.
 
 ## Installation
 
