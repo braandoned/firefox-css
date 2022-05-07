@@ -78,34 +78,24 @@
 /* non active tabs have darker text */
 .tabbrowser-tab:not([visuallyselected="true"]):not([multiselected]):not(:hover) {
   color: #888888 !important;
-}
+} */
+
 
 /* icons */
 /* #PanelUI-menu-button {
-  list-style-image: url(image/firefox.svg) !important;
+  list-style-image: url(./image/firefox.svg) !important;
 } */
 
 #back-button > .toolbarbutton-icon {
-   border: none !important;
-  border-radius: 0 !important;
-  background: none !important;
+  border: none !important;
   width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
   height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
   padding: var(--toolbarbutton-inner-padding) !important;
   border-radius: var(--toolbarbutton-border-radius) !important;
-}
-
-#back-button:not([disabled]):not([open]):hover > .toolbarbutton-icon {
-  box-shadow: none !important;
-  background-color: var(--toolbarbutton-hover-background) !important;
-}
+} 
 
 #nav-bar #PanelUI-button .toolbarbutton-icon {
 	opacity:  0.8 !important;
-}
-
-#back-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon {
-	background-color: var(--toolbarbutton-active-background) !important;	
 }
 
 /* url bar */
@@ -387,11 +377,6 @@ toolbar
 	--chrome-content-separator-color: none !important;
 }
 
-
-#back-button:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon {
-	background-color: var(--toolbarbutton-active-background) !important;
-	
-}
 
 :root:-moz-lwtheme-brighttext menupopup  {
 	--dark-menu-background-color: rgba(34, 34, 36, 0.98) !important;
