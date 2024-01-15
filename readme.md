@@ -8,17 +8,10 @@ Custom User CSS for Firefox
 
 ![preview](./assets/jellybeans-preview.png)
 
-> Tokyo Night
-
-![preview](./assets/preview.png)
-
 ## Overview
 - `jellybeans-fox/`
     - `chrome/` : contains the firefox css based on 
 the jellybeans.vim theme
-- `tokyo-night-fox/`
-    - `chrome/` : contains the firefox css based on 
-the tokyo-night theme
 -  `fonts/` : 
     - `CartographCF` : Required font. Put this folder in your `.local/share/fonts` directory.
 
@@ -37,18 +30,11 @@ the tokyo-night theme
     - Jellybeans CSS
     ![spaceing](./assets/jellybeans-spacings.png)
 
-    - Tokyo Night CSS
-    ![spacings](./assets/spacings.png)
-
 6. Paste the contents of the `font` directory into your `~/.local/share/fonts` directory.
 
 ## Note:
 - **For jellybeans-fox css:** 
 I highly recommend getting this firefox theme: [`https://addons.mozilla.org/en-US/firefox/addon/jellybeans-vim/`](https://addons.mozilla.org/en-US/firefox/addon/jellybeans-vim/) and the CartographCF Nerd font.
-
-- **For tokyo-night-fox css:**
-I highly recommend installing this firefox theme: [`https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-theme/`](https://addons.mozilla.org/en-US/firefox/addon/tokyo-night-theme/) and the JetBrains Mono Nerd font (`yay -S nerd-fonts-jetbrains-mono` if you are on Arch-based system) 
-
 
  ## DuckDuckGo
 ![ddg-theme](./assets/ddg2.png)
@@ -57,9 +43,8 @@ Want to get this DuckDuckGo theme? Go to [`https://duckduckgo.com/settings#theme
 
 ![ddg](./assets/ddg.png)
 
-
-
 ## Credits
 
+* **Forked from firefox-css:** [`https://github.com/rototrash/firefox-css`](https://github.com/rototrash/firefox-css)
 * **Forked from Nightfox:** [`https://github.com/snthcy/nightfox`](https://github.com/snthcy/nightfox)  
 * **Nightfox is based off of:** [`https://github.com/datguypiko/Firefox-Mod-Blur`](https://github.com/datguypiko/Firefox-Mod-Blur)

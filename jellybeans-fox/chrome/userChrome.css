@@ -10,6 +10,31 @@
   font-style: normal;
 }
 
+/* ----- Removes the forward/back button ----- */
+#back-button,
+#forward-button {
+  display: none !important;
+}
+
+/* ----- makes some buttons nicer ----- */
+#PanelUI-menu-button,
+#unified-extensions-button,
+#reload-button,
+#stop-button {
+  padding: 2px !important
+}
+
+#reload-button,
+#stop-button {
+  margin: 1px !important;
+}
+
+
+/* ----- moves hamburger menu to the left ----- */
+#PanelUI-button {
+  order: -2 !important;
+}
+
 /* ----- Remove tab bar spacer ----- */
 .titlebar-spacer {
   display: none !important;
@@ -28,31 +53,31 @@
 
 /* order of bars */
 #navigator-toolbox #nav-bar {
-  -moz-box-ordinal-group: 0 !important;
+  order: 0 !important;
   background-color: transparent !important;
 }
 
 #navigator-toolbox #toolbar-menubar {
-  -moz-box-ordinal-group: 1 !important;
+  order: 1 !important;
 }
 
 #titlebar {
-  -moz-box-ordinal-group: 2 !important;
+  order: 2 !important;
 }
 
 #PersonalToolbar {
-  -moz-box-ordinal-group: 3 !important;
+  order: 3 !important;
 }
 
 /* fullscreen nav errors */
 :root[tabsintitlebar][sizemode="maximized"] #navigator-toolbox {
-  -moz-appearance: none !important;
+  appearance: none !important;
   padding-top: 8px !important;
 }
 
 /* fullscreen padding */
 :root[tabsintitlebar][sizemode="maximized"] #titlebar {
-  -moz-appearance: none !important;
+  appearance: none !important;
 
 }
 
@@ -94,19 +119,11 @@
   color: #888888 !important;
 }
 
-*/
+
 /* icons */
 /* #PanelUI-menu-button {
   list-style-image: url(./image/firefox.svg) !important;
 } */
-
-#back-button>.toolbarbutton-icon {
-  border: none !important;
-  width: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  height: calc(2 * var(--toolbarbutton-inner-padding) + 16px) !important;
-  padding: var(--toolbarbutton-inner-padding) !important;
-  border-radius: var(--toolbarbutton-border-radius) !important;
-}
 
 #nav-bar #PanelUI-button .toolbarbutton-icon {
   opacity: 0.8 !important;
@@ -318,7 +335,7 @@ toolbar #new-tab-button:not([disabled="true"]):-moz-any([open], [checked], :hove
 
 /* tab close button on hover */
 .tabbrowser-tab:not([pinned]) .tab-close-button {
-  display: -moz-box !important;
+  display: flex !important;
   opacity: 0;
   visibility: collapse !important;
   transition: opacity 0.25s, visibility 0.25s ease-in !important;
@@ -376,21 +393,20 @@ toolbar #new-tab-button:not([disabled="true"]):-moz-any([open], [checked], :hove
   --dark-menu-background-color: rgba(34, 34, 36, 0.98) !important;
 }
 
-/* move left close/min/max buttons */
+/* move right close/min/max buttons */
 
 .titlebar-buttonbox-container {
-  -moz-box-ordinal-group: 0 !important;
+  order: 0 !important;
 }
 
 #nav-bar {
-  padding-left: 105px;
+  padding-right: 105px;
 }
 
 #TabsToolbar .titlebar-buttonbox-container {
-  visibility: visible !important;
   position: absolute !important;
   top: 5px;
-  left: 0;
+  right: 0;
 }
 
 .titlebar-buttonbox-container {
@@ -411,150 +427,9 @@ toolbar #new-tab-button:not([disabled="true"]):-moz-any([open], [checked], :hove
 .titlebar-button {
   padding-left: 8px !important;
   padding-right: 8px !important;
-  margin-left: 4px !important;
+  margin-right: 4px !important;
 }
 
 :root[sizemode="maximized"] .titlebar-buttonbox-container {
   padding-top: 8px !important;
-}
-
-
-.titlebar-min {
-  -moz-box-ordinal-group: 2 !important;
-}
-
-.titlebar-max,
-.titlebar-restore {
-  -moz-box-ordinal-group: 1 !important;
-}
-
-.titlebar-close {
-  -moz-box-ordinal-group: 0 !important;
-}
-
-/*  Move left close/min/max buttons - COMMENT THIS ALL OF THE WAY DOWN TO GET RID OF MACOS ICONS */
-#nav-bar {
-  padding-left: 90px;
-}
-
-#TabsToolbar .titlebar-buttonbox-container,
-:root[inFullscreen="true"] #window-controls {
-  -moz-box-ordinal-group: 0 !important;
-  position: absolute !important;
-  top: 12px;
-  left: 0;
-}
-
-:root[inFullscreen="true"] #window-controls {
-  display: -webkit-box;
-}
-
-.titlebar-buttonbox-container {
-  display: block;
-}
-
-:root[sizemode="maximized"] .titlebar-buttonbox-container {
-  padding-top: 8px !important;
-}
-
-:root:-moz-window-inactive:not([customizing]) :is(.titlebar-buttonbox, #window-controls)>toolbarbutton:not(:hover) {
-  opacity: 0.65 !important;
-  list-style-image: url(window/inactive.svg) !important;
-}
-
-:is(.titlebar-buttonbox, #window-controls) .toolbarbutton-icon {
-  opacity: 1 !important;
-  appearance: none !important;
-}
-
-.titlebar-button>.toolbarbutton-icon,
-#window-controls>toolbarbutton>.toolbarbutton-icon {
-  width: 14px !important;
-  min-width: 14px !important;
-  min-height: 14px !important;
-  height: 14px !important;
-  stroke: none !important;
-}
-
-.titlebar-buttonbox,
-#window-controls {
-  margin-right: 6x !important;
-  margin-left: 0 !important;
-}
-
-.titlebar-close,
-#close-button {
-  appearance: none !important;
-  padding: 0px !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  margin: 0px !important;
-  background-color: transparent !important;
-  -moz-box-ordinal-group: 0 !important;
-}
-
-.titlebar-min,
-#minimize-button {
-  appearance: none !important;
-  padding: 0px !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  margin: 0px !important;
-  background-color: transparent !important;
-  -moz-box-ordinal-group: 1 !important;
-}
-
-.titlebar-max,
-.titlebar-restore,
-#restore-button {
-  appearance: none !important;
-  padding: 0px !important;
-  padding-left: 8px !important;
-  padding-right: 8px !important;
-  margin: 0px !important;
-  background-color: transparent !important;
-  -moz-box-ordinal-group: 2 !important;
-}
-
-#TabsToolbar #window-controls>toolbarbutton,
-#TabsToolbar .titlebar-buttonbox .titlebar-button {
-  list-style-image: url(window/inactive.svg) !important;
-}
-
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-close,
-#TabsToolbar #window-controls:hover #close-button {
-  list-style-image: url(window/close.svg) !important;
-
-}
-
-#TabsToolbar .titlebar-buttonbox-container .titlebar-close:hover,
-#TabsToolbar #window-controls #close-button:hover {
-  list-style-image: url(window/close-hover.svg) !important;
-}
-
-
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-min,
-#TabsToolbar #window-controls:hover #minimize-button {
-  list-style-image: url(window/minimize.svg) !important;
-}
-
-#TabsToolbar .titlebar-buttonbox-container .titlebar-min:hover,
-#TabsToolbar #window-controls #minimize-button:hover {
-  list-style-image: url(window/minimize-hover.svg) !important;
-}
-
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-max,
-#TabsToolbar .titlebar-buttonbox-container:hover .titlebar-restore,
-#TabsToolbar #window-controls:hover #restore-button {
-  list-style-image: url(window/maximize.svg) !important;
-}
-
-#TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover {
-  list-style-image: url(window/maximize-hover.svg) !important;
-}
-
-:root[sizemode="maximized"] #TabsToolbar .titlebar-buttonbox-container .titlebar-max:hover,
-#TabsToolbar .titlebar-buttonbox-container .titlebar-restore:hover,
-#TabsToolbar #window-controls #restore-button:hover {
-  list-style-image: url(window/maximize-restore.svg) !important;
 }
